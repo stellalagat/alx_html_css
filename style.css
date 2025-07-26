@@ -1,1 +1,49 @@
+/* Flex layout for body (vertical stack) */
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Flex layout for main (horizontal side-by-side layout) */
+main {
+  display: flex;
+  flex-direction: row;
+  flex: auto;
+}
+
+/* Article takes 2/3 of the width */
+article {
+  flex: 2;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+/* Aside takes 1/3 of the width */
+aside {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+/* Optional: Add some spacing and colors for clarity */
+header,
+footer {
+  padding: 20px;
+  background-color: #e0f7fa;
+  text-align: center;
+}
+
+article {
+  background-color: #ffffff;
+}
+
+aside {
+  background-color: #f0f0f0;
+}
+
+footer {
+  background-color: #c8e6c9;
+}
 
