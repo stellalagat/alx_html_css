@@ -112,7 +112,7 @@ main section:first-of-type p {
   font-size: 12px;
   color: #cfcfcf;
 }
-</style>
+
 body {
   background-color: #fdfdfd;
   color: #333;
@@ -160,6 +160,54 @@ aside {
 h1, h2 {
   color: #00796b;
 }
+/* Testimonial Section */
+.testimonial {
+  background-color: #c271ff;
+  padding: 60px 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.testimonial-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.testimonial img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonial .quote {
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 15px;
+  text-align: left;
+  line-height: 1.5;
+  max-width: 600px;
+}
+
+.testimonial .person-name {
+  font-weight: bold;
+  font-size: 16px;
+  text-align: left;
+  margin-bottom: 4px;
+}
+
+.testimonial .person-title {
+  font-style: italic;
+  font-size: 14px;
+  color: #fff;
+  text-align: left;
+}
+
 /* Footer styling */
 footer {
   background-color: #c8e6c9;
