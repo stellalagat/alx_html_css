@@ -207,6 +207,108 @@ h1, h2 {
   color: #fff;
   text-align: left;
 }
+/* Tutorials Section */
+.tutorials {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.tutorials h2 {
+  font-size: 28px;
+  font-weight: 300;
+  margin-bottom: 40px;
+}
+
+.tutorials .highlight {
+  color: #c271ff;
+  font-weight: bold;
+}
+
+.tutorials-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.tutorial-card {
+  background-color: #fff;
+  border-radius: 8px;
+  width: 220px;
+  text-align: left;
+}
+
+.thumbnail {
+  position: relative;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+}
+
+.thumbnail img {
+  width: 100%;
+  display: block;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url('./images/play.png'); /* Replace with your play icon */
+  background-size: contain;
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+}
+
+.tutorial-card h3 {
+  font-size: 16px;
+  margin: 10px;
+  font-weight: bold;
+}
+
+.tutorial-card p {
+  font-size: 14px;
+  color: #666;
+  margin: 0 10px 10px 10px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.author img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.author span {
+  font-size: 13px;
+  font-weight: bold;
+  color: #c271ff;
+}
+
+.duration {
+  font-size: 12px;
+  color: #888;
+}
+
+.rating {
+  text-align: center;
+  padding: 10px 0 20px;
+  font-size: 14px;
+  color: #c271ff;
+}
 
 /* Footer styling */
 footer {
