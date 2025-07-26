@@ -1,3 +1,118 @@
+
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #ffffff;
+  color: #fff;
+}
+
+/* Header Styling */
+header {
+  background-color: #071629;
+  padding: 20px 40px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav img {
+  height: 40px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* Hero Section */
+main section:first-of-type {
+  background: url('./images/background.png') no-repeat center center/cover;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+main section:first-of-type h1 {
+  font-size: 60px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+main section:first-of-type span {
+  margin: 0 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+}
+
+main section:first-of-type button {
+  margin-top: 30px;
+  padding: 12px 32px;
+  background-color: #c271ff;
+  border: none;
+  color: white;
+  font-size: 14px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* Instructor Section */
+main section:first-of-type > div:nth-child(2) {
+  margin-top: 100px;
+}
+
+main section:first-of-type h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+main section:first-of-type > div:nth-child(2) > div {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+main section:first-of-type > div:nth-child(2) > div > div {
+  text-align: center;
+  max-width: 150px;
+}
+
+main section:first-of-type img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+main section:first-of-type h3 {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #fff;
+}
+
+main section:first-of-type p {
+  font-size: 12px;
+  color: #cfcfcf;
+}
+</style>
 body {
   background-color: #fdfdfd;
   color: #333;
