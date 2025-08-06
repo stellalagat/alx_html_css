@@ -525,4 +525,137 @@ footer {
   font-size: 0.9rem;
   color: #555;
 }
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #1a1a2e; /* Dark background color for context */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure body takes full height to push footer down */
+}
+
+.footer {
+    background-color: #2a2c3a; /* Dark blue-grey background for the footer */
+    color: #e0e0e0; /* Light text color */
+    padding: 40px 20px; /* Vertical and horizontal padding */
+    margin-top: auto; /* Pushes the footer to the bottom of the page */
+    width: 100%;
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Pushes left and right content to ends */
+    align-items: center; /* Vertically aligns items */
+    max-width: 1200px; /* Max width for the content inside the footer */
+    margin: 0 auto; /* Center the content */
+    padding-bottom: 30px; /* Space between top content and copyright */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle separator line */
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between smiley and brand name */
+}
+
+.smiley-icon {
+    font-size: 2.5em; /* Size of the smiley icon */
+    color: #e0e0e0;
+}
+
+.brand-name {
+    font-size: 1.5em; /* Size of the brand name */
+    font-weight: 600; /* Bolder font for brand name */
+}
+
+.footer-right {
+    display: flex;
+    gap: 15px; /* Space between social media icons */
+}
+
+.social-icon {
+    color: #e0e0e0;
+    font-size: 1.5em; /* Size of social media icons */
+    width: 40px; /* Fixed width for circular background */
+    height: 40px; /* Fixed height for circular background */
+    border: 1px solid #e0e0e0; /* White border */
+    border-radius: 50%; /* Makes the border circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none; /* Removes underline from links */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition on hover */
+}
+
+.social-icon:hover {
+    background-color: #e0e0e0; /* White background on hover */
+    color: #2a2c3a; /* Dark text color on hover */
+}
+
+.copyright {
+    text-align: center;
+    font-size: 0.9em;
+    color: #b0b0b0; /* Lighter color for copyright text */
+    margin-top: 30px; /* Space above copyright text */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    .footer-left {
+        margin-bottom: 20px; /* Space below brand on smaller screens */
+    }
+
+    .footer-right {
+        margin-top: 15px; /* Space above social icons when stacked */
+    }
+
+    .brand-name {
+        font-size: 1.3em;
+    }
+
+    .smiley-icon {
+        font-size: 2em;
+    }
+
+    .social-icon {
+        font-size: 1.3em;
+        width: 35px;
+        height: 35px;
+    }
+
+    .copyright {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 30px 15px;
+    }
+
+    .brand-name {
+        font-size: 1.2em;
+    }
+
+    .smiley-icon {
+        font-size: 1.8em;
+    }
+
+    .social-icon {
+        font-size: 1.2em;
+        width: 30px;
+        height: 30px;
+    }
+
+    .copyright {
+        font-size: 0.8em;
+    }
+}
 
