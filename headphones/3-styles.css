@@ -1,0 +1,679 @@
+/* CSS Reset and Variables */
+:root {
+    --primary-color: #FF6565;
+    --text-color: #071629;
+    --white-color: #FFFFFF;
+    --max-width: 1000px;
+    --font-family: 'Source Sans Pro', sans-serif;
+    --section-padding: 110px 0;
+    --form-max-width: 335px;
+}
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* Custom Font Icons */
+@font-face {
+    font-family: 'holberton_school-icon';
+    src: url('fonts/holberton_school-icon.eot?sq4eq4');
+    src: url('fonts/holberton_school-icon.eot?sq4eq4#iefix') format('embedded-opentype'),
+         url('fonts/holberton_school-icon.ttf?sq4eq4') format('truetype'),
+         url('fonts/holberton_school-icon.woff?sq4eq4') format('woff'),
+         url('fonts/holberton_school-icon.svg?sq4eq4#holberton_school-icon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="holberton_school-icon-"], [class*=" holberton_school-icon-"] {
+    font-family: 'holberton_school-icon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.holberton_school-icon-ic_sound:before {
+    content: "\e90e";
+}
+.holberton_school-icon-ic_video:before {
+    content: "\e910";
+}
+.holberton_school-icon-ic_music:before {
+    content: "\e90d";
+}
+.holberton_school-icon-ic_hearing:before {
+    content: "\e909";
+}
+
+/* Container */
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 28px 0;
+}
+
+/* Navigation */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo img {
+    height: 32px;
+    width: auto;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 41px;
+}
+
+.nav-link {
+    color: var(--white-color);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: lowercase;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link:active {
+    color: var(--primary-color);
+}
+
+/* Mobile menu toggle */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.nav-toggle span {
+    width: 20px;
+    height: 2px;
+    background-color: var(--white-color);
+    margin: 2px 0;
+    transition: 0.3s;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('images/headphones_hero_1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 800px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--white-color);
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 637px;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+
+.hero-title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 5px;
+}
+
+.hero-subtitle {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 40px;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    padding: 13px 31px;
+    border: none;
+    border-radius: 22px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.btn:hover,
+.btn:active {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 101, 101, 0.3);
+}
+
+.hero-description {
+    font-size: 16px;
+    line-height: 1.625;
+    margin-top: 65px;
+    font-weight: 400;
+}
+
+/* What we do Section */
+.what-we-do {
+    padding: var(--section-padding);
+    text-align: center;
+}
+
+.section-header {
+    max-width: 637px;
+    margin: 0 auto 96px;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 40px;
+    color: var(--text-color);
+}
+
+.section-description {
+    font-size: 16px;
+    line-height: 1.625;
+    color: var(--text-color);
+}
+
+/* Services Grid */
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 58px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.service-item {
+    flex: 0 1 207px;
+    text-align: center;
+}
+
+.service-icon {
+    margin-bottom: 20px;
+}
+
+.service-icon span {
+    font-size: 94px;
+    color: var(--primary-color);
+    line-height: 1;
+}
+
+.service-title {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 14px;
+    color: var(--text-color);
+}
+
+.service-description {
+    font-size: 14px;
+    line-height: 1.857;
+    color: var(--text-color);
+}
+
+/* Our Results Section */
+.our-results {
+    background-image: url('images/headphones_hero_2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: var(--section-padding);
+    text-align: center;
+    color: var(--white-color);
+    position: relative;
+}
+
+.our-results::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.our-results .container {
+    position: relative;
+    z-index: 1;
+}
+
+.our-results .section-title {
+    color: var(--white-color);
+}
+
+.our-results .section-description {
+    color: var(--white-color);
+}
+
+/* Results Grid */
+.results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 58px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.result-item {
+    flex: 0 1 190px;
+    text-align: center;
+    position: relative;
+}
+
+.result-icon {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.result-icon img {
+    width: 190px;
+    height: 190px;
+    object-fit: contain;
+}
+
+.result-number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 46px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--white-color);
+    margin: 0;
+}
+
+.result-description {
+    font-size: 14px;
+    line-height: 1.857;
+    color: var(--white-color);
+    margin-top: 10px;
+}
+
+/* Contact Us Section */
+.contact-us {
+    padding: var(--section-padding);
+    text-align: center;
+}
+
+.contact-form {
+    max-width: var(--form-max-width);
+    margin: 0 auto;
+}
+
+/* Form Styles */
+.form-group {
+    position: relative;
+    margin-bottom: 45px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 15px 0;
+    border: none;
+    border-bottom: 1px solid #071629;
+    background: transparent;
+    font-size: 14px;
+    font-family: var(--font-family);
+    color: var(--text-color);
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.form-input:focus {
+    border-bottom-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+    transform: translateY(-25px) scale(0.8);
+    color: var(--primary-color);
+}
+
+.form-input.form-textarea {
+    resize: vertical;
+    min-height: 40px;
+    padding-top: 10px;
+}
+
+.form-label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    font-size: 14px;
+    color: var(--text-color);
+    pointer-events: none;
+    transition: all 0.3s ease;
+    transform-origin: left top;
+}
+
+/* Form validation styles */
+.form-input:invalid:not(:placeholder-shown) {
+    border-bottom-color: #ff4757;
+    animation: shake 0.5s ease-in-out;
+}
+
+.form-input:invalid:not(:placeholder-shown) + .form-label {
+    color: #ff4757;
+}
+
+.form-input:valid:not(:placeholder-shown) {
+    border-bottom-color: #2ed573;
+}
+
+.form-input:valid:not(:placeholder-shown) + .form-label {
+    color: #2ed573;
+}
+
+/* Submit button */
+.form-submit {
+    margin-top: 30px;
+    min-width: 162px;
+    position: relative;
+    overflow: hidden;
+}
+
+.form-submit::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.form-submit:hover::before {
+    left: 100%;
+}
+
+/* Animations */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-group {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.form-group:nth-child(1) { animation-delay: 0.1s; }
+.form-group:nth-child(2) { animation-delay: 0.2s; }
+.form-group:nth-child(3) { animation-delay: 0.3s; }
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .header {
+        padding: 20px 0;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .hero {
+        min-height: 100vh;
+        background-position: 45% center;
+    }
+
+    .hero-content {
+        padding-top: 80px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .hero-title {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+        line-height: 1.2;
+    }
+
+    .hero-description {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-top: 40px;
+    }
+
+    /* What we do mobile styles */
+    .what-we-do {
+        padding: 60px 0;
+    }
+
+    .section-header {
+        margin-bottom: 60px;
+    }
+
+    .section-title {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    .services {
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+    }
+
+    .service-item {
+        flex: none;
+        max-width: 207px;
+    }
+
+    .service-icon span {
+        font-size: 80px;
+    }
+
+    /* Our results mobile styles */
+    .our-results {
+        padding: 60px 0;
+    }
+
+    .results {
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+    }
+
+    .result-item {
+        flex: none;
+        max-width: 190px;
+    }
+
+    .result-icon img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .result-number {
+        font-size: 36px;
+    }
+
+    /* Contact us mobile styles */
+    .contact-us {
+        padding: 60px 0;
+    }
+
+    .contact-form {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .form-group {
+        margin-bottom: 35px;
+    }
+
+    .form-input {
+        font-size: 16px; /* Prevent zoom on iOS */
+    }
+}
+
+/* Tablet Styles */
+@media (max-width: 768px) and (min-width: 481px) {
+    .nav-menu {
+        gap: 30px;
+    }
+
+    .hero-content {
+        padding-top: 80px;
+    }
+
+    .hero-title {
+        font-size: 32px;
+    }
+
+    .hero-description {
+        margin-top: 50px;
+    }
+
+    /* What we do tablet styles */
+    .what-we-do {
+        padding: 80px 0;
+    }
+
+    .section-header {
+        margin-bottom: 80px;
+    }
+
+    .services {
+        gap: 40px;
+    }
+
+    .service-item {
+        flex: 0 1 calc(50% - 20px);
+        max-width: 300px;
+    }
+
+    /* Our results tablet styles */
+    .our-results {
+        padding: 80px 0;
+    }
+
+    .results {
+        gap: 40px;
+    }
+
+    .result-item {
+        flex: 0 1 calc(50% - 20px);
+        max-width: 250px;
+    }
+
+    .result-icon img {
+        width: 170px;
+        height: 170px;
+    }
+
+    .result-number {
+        font-size: 42px;
+    }
+
+    /* Contact us tablet styles */
+    .contact-us {
+        padding: 80px 0;
+    }
+
+    .contact-form {
+        max-width: 400px;
+    }
+}
