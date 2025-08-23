@@ -1,17 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tweets</title>
-  <link href="base.css" rel="stylesheet">
-  <link href="styles.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Tweets - Basic HTML Page</title>
+    <link href="base.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
 </head>
 <body>
-  <!-- TODO: Add your tweets content from the previous project here -->
-  <main class="container">
-    <h1>Tweets</h1>
-    <p>This is the tweets page for css_basic.</p>
-  </main>
+    <header>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="tweets.html">Tweets</a></li>
+        </ul>
+    </header>
+    <main>
+        <article>
+            <h1>Welcome to My Basic HTML Page</h1>
+            <p>This is a simple, valid HTML document.</p>
+            
+            <h1>My Tweets</h1>
+            <p>Here are some interesting tweets I'd like to share:</p>
+            
+            <!-- Embedded Tweet -->
+            <blockquote class="twitter-tweet">
+                <p lang="en" dir="ltr">Just shipped a new feature! 🚀 The feeling when your code works on the first try is unmatched. <a href="https://twitter.com/hashtag/coding?src=hash&amp;ref_src=twsrc%5Etfw">#coding</a> <a href="https://twitter.com/hashtag/webdev?src=hash&amp;ref_src=twsrc%5Etfw">#webdev</a> <a href="https://twitter.com/hashtag/developer?src=hash&amp;ref_src=twsrc%5Etfw">#developer</a></p>
+                &mdash; Web Developer (@webdev_example) <a href="https://twitter.com/webdev_example/status/1234567890123456789?ref_src=twsrc%5Etfw">January 1, 2024</a>
+            </blockquote>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            
+            <h2>More Social Content</h2>
+            <p>Follow me on social media for more updates about my web development journey and latest projects!</p>
+            
+            <p><a href="index.html">← Back to Homepage</a></p>
+        </article>
+        <aside>
+            <p>placeholder to add comment thread later</p>
+        </aside>
+    </main>
+    <footer>
+        <p>Made by John Doe - <a href="https://github.com" target="_blank">here</a></p>
+    </footer>
 </body>
 </html>
