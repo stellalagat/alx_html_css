@@ -1,0 +1,35 @@
+/* Base styles for ALX HTML/CSS project */
+html { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5;
+  color: #222;
+  background: #fafafa;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+a { color: #0366d6; text-decoration: none; }
+a:hover, a:focus { text-decoration: underline; }
+
+h1, h2, h3, h4, h5, h6 { margin: 0.5em 0 0.25em; line-height: 1.2; }
+p { margin: 0 0 1em; }
+
+ul, ol { margin: 0 0 1em 1.25em; padding: 0; }
+
+.container { max-width: 960px; margin: 0 auto; padding: 1rem; }
+
+header, footer, main, nav, section, article { display: block; }
+
+/* Optional subtle card style */
+.card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
